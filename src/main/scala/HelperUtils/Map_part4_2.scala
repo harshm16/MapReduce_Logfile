@@ -3,9 +3,9 @@ package HelperUtils
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 
-class Map_part3_2 extends Mapper[LongWritable, Text, Text, IntWritable] {
+class Map_part4_2 extends Mapper[LongWritable, Text, Text, IntWritable] {
 
-  val logger = CreateLogger(classOf[Map_part3_2])
+  val logger = CreateLogger(classOf[Map_part4_2])
 
 
   override def map(key: LongWritable, rowLine: Text, context: Mapper[LongWritable, Text, Text, IntWritable]#Context) = {

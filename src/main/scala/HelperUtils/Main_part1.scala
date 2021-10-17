@@ -29,7 +29,7 @@ object Main_part1 {
 
 
     /** Separator between key value in output set to comma */
-    //configuration.set("mapreduce.output.textoutputformat.separator",";")
+    configuration.set("mapreduce.output.textoutputformat.separator",",")
 
     val job = Job.getInstance(configuration, "log type count")
 
@@ -39,8 +39,8 @@ object Main_part1 {
     //    job.setMapperClass(classOf[Map_new])
     //    job.setReducerClass(classOf[Reduce_new])
 
-    job.setMapperClass(classOf[Map1])
-    job.setReducerClass(classOf[Reduce1])
+    job.setMapperClass(classOf[Map_part1])
+    job.setReducerClass(classOf[Reduce_part1])
 
     job.setInputFormatClass(classOf[TextInputFormat])
     job.setOutputFormatClass(classOf[TextOutputFormat[Text, Text]])

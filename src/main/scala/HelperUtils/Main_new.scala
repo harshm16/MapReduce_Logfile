@@ -39,8 +39,8 @@ object Main_new {
     //    job.setMapperClass(classOf[Map_new])
     //    job.setReducerClass(classOf[Reduce_new])
 
-    job.setMapperClass(classOf[Map_part3])
-    job.setReducerClass(classOf[Reduce_part3])
+    job.setMapperClass(classOf[Map_part4])
+    job.setReducerClass(classOf[Reduce_part4])
 
     job.setInputFormatClass(classOf[TextInputFormat])
     job.setOutputFormatClass(classOf[TextOutputFormat[Text, Text]])

@@ -9,23 +9,31 @@ import org.apache.hadoop.mapreduce.lib.output.{FileOutputFormat, TextOutputForma
 
 import java.util.StringTokenizer
 
-class Main{}
+class Main_part2{}
 
 /**
  * Main program
  * Map Reduce execution starts here
  */
-object Main {
+object Main_part2 {
 
   //val logger = CreateLogger(classOf[Main])
 
   def main(args: Array[String]): Unit = {
 
-    val outPut = new Path(args(1))
+    val outPut1 = new Path(args(1))
     val configuration = new Configuration()
     val fs = FileSystem.get(configuration)
-    if (fs.exists(outPut))
-      fs.delete(outPut, true)
+    if (fs.exists(outPut1))
+      fs.delete(outPut1, true)
+
+    val outPut2 = new Path(args(2))
+    if (fs.exists(outPut2))
+      fs.delete(outPut2, true)
+
+    val outPut3 = new Path(args(3))
+    if (fs.exists(outPut3))
+      fs.delete(outPut3, true)
 
 
     /** Separator between key value in output set to comma */
@@ -36,8 +44,8 @@ object Main {
     /** Setting configurations for the job  */
     job1.setJarByClass(this.getClass)
 
-    job1.setMapperClass(classOf[Map1])
-    job1.setReducerClass(classOf[Reduce1])
+    job1.setMapperClass(classOf[Map_part2_1])
+    job1.setReducerClass(classOf[Reduce_part1])
 
     job1.setInputFormatClass(classOf[TextInputFormat])
     job1.setOutputFormatClass(classOf[TextOutputFormat[Text, Text]])
@@ -54,8 +62,8 @@ object Main {
     /** Setting configurations for the job  */
     job2.setJarByClass(this.getClass)
 
-    job2.setMapperClass(classOf[Map2])
-    job2.setReducerClass(classOf[Reduce1])
+    job2.setMapperClass(classOf[Map_part2_2])
+    job2.setReducerClass(classOf[Reduce_part1])
 
     job2.setInputFormatClass(classOf[TextInputFormat])
     job2.setOutputFormatClass(classOf[TextOutputFormat[Text, Text]])
@@ -73,15 +81,15 @@ object Main {
     /** Setting configurations for the job  */
     job3.setJarByClass(this.getClass)
 
-    job3.setMapperClass(classOf[Map3])
-    job3.setReducerClass(classOf[Reduce2])
+    job3.setMapperClass(classOf[Map_part2_3])
+    job3.setReducerClass(classOf[Reduce_part2])
 
     job3.setInputFormatClass(classOf[TextInputFormat])
-    job3.setOutputFormatClass(classOf[TextOutputFormat[IntWritable, IntWritable]])
+    job3.setOutputFormatClass(classOf[TextOutputFormat[IntWritable, Text]])
     job3.setSortComparatorClass(classOf[Custom_comparator])
 
     job3.setOutputKeyClass(classOf[IntWritable])
-    job3.setOutputValueClass(classOf[IntWritable])
+    job3.setOutputValueClass(classOf[Text])
     FileInputFormat.addInputPath(job3, new Path(args(2)))
     FileOutputFormat.setOutputPath(job3, new Path(args(3)))
 

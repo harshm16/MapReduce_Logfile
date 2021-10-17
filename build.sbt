@@ -32,7 +32,7 @@ libraryDependencies ++= Seq(
 )
 
 
-mainClass in assembly := Some("HelperUtils.Main")
+//mainClass in (Compile, packageBin) := Some("Main")
 
 assembly / assemblyMergeStrategy := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
