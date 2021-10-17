@@ -37,7 +37,8 @@ object Main_part2 {
 
 
     /** Separator between key value in output set to comma */
-    //configuration.set("mapreduce.output.textoutputformat.separator",";")
+
+    configuration.set("mapreduce.output.textoutputformat.separator",",")
 
     val job1 = Job.getInstance(configuration, "String_frequency")
 
