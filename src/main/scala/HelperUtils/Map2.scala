@@ -20,10 +20,8 @@ class Map2 extends Mapper[LongWritable, Text, Text, IntWritable] {
       val error_type = Array(1)
 
       if (error_type == "ERROR"){
-        context.write(new Text(bin), new IntWritable(1))
+        context.write(new Text(bin.toString), new IntWritable(1))
       }
-      //logger.info(s"Key is ${error_type}, value is ${string_length}")
-      //context.write(new Text(error_type), new IntWritable(string_length.toInt))
     }
   }
 }

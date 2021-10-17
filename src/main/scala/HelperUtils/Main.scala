@@ -58,14 +58,34 @@ object Main {
     job2.setReducerClass(classOf[Reduce1])
 
     job2.setInputFormatClass(classOf[TextInputFormat])
-    job2.setOutputFormatClass(classOf[TextOutputFormat[Int, Int]])
-    job2.setSortComparatorClass(classOf[Custom_comparator])
+    job2.setOutputFormatClass(classOf[TextOutputFormat[Text, Text]])
+
     job2.setOutputKeyClass(classOf[Text])
     job2.setOutputValueClass(classOf[IntWritable])
     FileInputFormat.addInputPath(job2, new Path(args(1)))
     FileOutputFormat.setOutputPath(job2, new Path(args(2)))
-    System.exit(if(job2.waitForCompletion(true))  0 else 1)
+    job2.waitForCompletion(true)
 
+
+    val conf3 = new Configuration()
+    val job3 = Job.getInstance(conf3, "swap_keys")
+
+    /** Setting configurations for the job  */
+    job3.setJarByClass(this.getClass)
+
+    job3.setMapperClass(classOf[Map3])
+    job3.setReducerClass(classOf[Reduce2])
+
+    job3.setInputFormatClass(classOf[TextInputFormat])
+    job3.setOutputFormatClass(classOf[TextOutputFormat[IntWritable, IntWritable]])
+    job3.setSortComparatorClass(classOf[Custom_comparator])
+
+    job3.setOutputKeyClass(classOf[IntWritable])
+    job3.setOutputValueClass(classOf[IntWritable])
+    FileInputFormat.addInputPath(job3, new Path(args(2)))
+    FileOutputFormat.setOutputPath(job3, new Path(args(3)))
+
+    System.exit(if(job3.waitForCompletion(true))  0 else 1)
 
   }
 
