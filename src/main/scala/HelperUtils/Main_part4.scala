@@ -21,15 +21,15 @@ object Main_part4 {
 
   def main(args: Array[String]): Unit = {
 
-    val outPut = new Path(args(1))
+//    val outPut = new Path(args(1))
     val configuration = new Configuration()
-    val fs = FileSystem.get(configuration)
-    if (fs.exists(outPut))
-      fs.delete(outPut, true)
-
-    val outPut2 = new Path(args(2))
-    if (fs.exists(outPut2))
-      fs.delete(outPut2, true)
+//    val fs = FileSystem.get(configuration)
+//    if (fs.exists(outPut))
+//      fs.delete(outPut, true)
+//
+//    val outPut2 = new Path(args(2))
+//    if (fs.exists(outPut2))
+//      fs.delete(outPut2, true)
 
     /** Separator between key value in output set to comma */
     //configuration.set("mapreduce.output.textoutputformat.separator",";")
@@ -53,6 +53,7 @@ object Main_part4 {
     job1.waitForCompletion(true)
 
     val conf2 = new Configuration()
+    conf2.set("mapreduce.output.textoutputformat.separator",",")
     val job2 = Job.getInstance(conf2, "string_length_sort")
 
     /** Setting configurations for the job  */

@@ -12,7 +12,7 @@ class Map_part2_3 extends Mapper[LongWritable, Text, IntWritable, Text] {
     val line = rowLine.toString
     if (!line.isEmpty) {
 
-      val Array = line.split("\t")
+      val Array = line.split(",")
 
       //logger.info(s"Key is ${error_type}, value is ${string_length}")
       context.write(new IntWritable(Array(1).toInt), new Text(Array(0)))

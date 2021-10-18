@@ -12,7 +12,7 @@ class Map_part2_2 extends Mapper[LongWritable, Text, Text, IntWritable] {
     val line = rowLine.toString
     if (!line.isEmpty) {
 
-      val map1_key: Array[String] = line.split("\t")
+      val map1_key: Array[String] = line.split(",")
 
       val Array = map1_key(0).split(":")
 

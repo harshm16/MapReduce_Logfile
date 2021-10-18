@@ -20,12 +20,12 @@ object Main_part3 {
   //val logger = CreateLogger(classOf[Main])
 
   def main(args: Array[String]): Unit = {
-
-    val outPut = new Path(args(1))
+//
+//    val outPut = new Path(args(1))
     val configuration = new Configuration()
-    val fs = FileSystem.get(configuration)
-    if (fs.exists(outPut))
-      fs.delete(outPut, true)
+//    val fs = FileSystem.get(configuration)
+//    if (fs.exists(outPut))
+//      fs.delete(outPut, true)
 
 
     /** Separator between key value in output set to comma */

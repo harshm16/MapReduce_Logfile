@@ -21,19 +21,19 @@ object Main_part2 {
 
   def main(args: Array[String]): Unit = {
 
-    val outPut1 = new Path(args(1))
+//    val outPut1 = new Path(args(1))
     val configuration = new Configuration()
-    val fs = FileSystem.get(configuration)
-    if (fs.exists(outPut1))
-      fs.delete(outPut1, true)
-
-    val outPut2 = new Path(args(2))
-    if (fs.exists(outPut2))
-      fs.delete(outPut2, true)
-
-    val outPut3 = new Path(args(3))
-    if (fs.exists(outPut3))
-      fs.delete(outPut3, true)
+//    val fs = FileSystem.get(configuration)
+//    if (fs.exists(outPut1))
+//      fs.delete(outPut1, true)
+//
+//    val outPut2 = new Path(args(2))
+//    if (fs.exists(outPut2))
+//      fs.delete(outPut2, true)
+//
+//    val outPut3 = new Path(args(3))
+//    if (fs.exists(outPut3))
+//      fs.delete(outPut3, true)
 
 
     /** Separator between key value in output set to comma */
@@ -58,7 +58,10 @@ object Main_part2 {
     job1.waitForCompletion(true)
 
     val conf2 = new Configuration()
+    conf2.set("mapreduce.output.textoutputformat.separator",",")
     val job2 = Job.getInstance(conf2, "string_length_sort")
+
+
 
     /** Setting configurations for the job  */
     job2.setJarByClass(this.getClass)
@@ -77,6 +80,7 @@ object Main_part2 {
 
 
     val conf3 = new Configuration()
+    conf3.set("mapreduce.output.textoutputformat.separator",",")
     val job3 = Job.getInstance(conf3, "swap_keys")
 
     /** Setting configurations for the job  */

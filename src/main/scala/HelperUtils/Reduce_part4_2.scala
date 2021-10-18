@@ -13,7 +13,7 @@ class Reduce_part4_2 extends Reducer[Text, IntWritable, Text, IntWritable] {
 
   override def reduce(key: Text, values: java.lang.Iterable[IntWritable], context: Reducer[Text, IntWritable, Text, IntWritable]#Context): Unit = {
 
-
+3
     var max = 0
     for (value <- values.asScala) {
       if (value.get > max) max = value.get
