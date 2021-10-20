@@ -5,12 +5,15 @@ import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 import org.joda.time.format.DateTimeFormat
 
+/** Mapper Class for subtask 3.
+ * (key,value) :: (log_type,1) */
 class Map_part3 extends Mapper[LongWritable, Text, Text, IntWritable] {
   private val frequency: IntWritable = new IntWritable (1)
   private val key_map: Text = new Text
   val logger = CreateLogger(classOf[Map_part3])
   //val pattern = "([a-c][e-g][0-3]|[A-Z][5-9][f-w]){5,15}".r
 
+  //Read the pattern from the Application conf file.
   val config: Config = ConfigFactory.load("application.conf")
   val pattern = (config.getString("randomLogGenerator.Pattern")).r
 

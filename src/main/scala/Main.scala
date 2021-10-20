@@ -2,7 +2,7 @@ import HelperUtils.{CreateLogger, Main_part1, Main_part2, Main_part3, Main_part4
 import com.typesafe.config.ConfigFactory
 import org.slf4j.LoggerFactory
 
-
+/** Driver class which call the Main class of each subtask based on the arguments passed by the user.*/
 class Main{}
 
 object Main:

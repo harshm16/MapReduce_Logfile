@@ -7,6 +7,8 @@ import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import scala.collection.mutable.ListBuffer
 import scala.io.Source
 
+/** Used for initial testing, to see how the pattern matching works in Scala. 
+ * Not used in any of the subtasks in hand.*/
 object regexMatch {
 
   var cols : String = ""

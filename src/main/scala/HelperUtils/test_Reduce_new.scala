@@ -5,6 +5,8 @@ import org.apache.hadoop.mapreduce.Reducer
 
 import scala.collection.JavaConverters._
 
+/** Reducer class used for initial testing, to see how a map reduce job works.
+ * Not used in any of the subtasks in hand.*/
 class test_Reduce_new extends Reducer[Text, IntWritable, Text, IntWritable] {
   private val count: IntWritable = new IntWritable()
 

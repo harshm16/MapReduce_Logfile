@@ -3,6 +3,9 @@ package HelperUtils
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 
+/** Third Mapper Class for subtask 2.
+ * Swaps the key-value pairs received from the Second reducer.
+ * (key,value) :: (number_of_matched_instances,binned_time_step) */
 class Map_part2_3 extends Mapper[LongWritable, Text, IntWritable, Text] {
 
   val logger = CreateLogger(classOf[Map_part2_3])

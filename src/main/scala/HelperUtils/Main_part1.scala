@@ -12,7 +12,7 @@ import java.util.StringTokenizer
 class Main_part1{}
 
 /**
- * Main program
+ * Main program to run the map reduce jobs to solve Subtask 1.
  * Map Reduce execution starts here
  */
 object Main_part1 {
@@ -21,8 +21,14 @@ object Main_part1 {
 
   def main(args: Array[String]): Unit = {
 
-//    val outPut = new Path(args(1))
+   
     val configuration = new Configuration()
+      
+    /** While running on a Hadoop Sandbox VM, 
+     * you can uncomment the following to delete an already existing output directory. */
+      
+//    val outPut = new Path(args(1))
+
 //    val fs = FileSystem.get(configuration)
 //    if (fs.exists(outPut))
 //      fs.delete(outPut, true)
@@ -35,9 +41,6 @@ object Main_part1 {
 
     /** Setting configurations for the job  */
     job.setJarByClass(this.getClass)
-    //
-    //    job.setMapperClass(classOf[Map_new])
-    //    job.setReducerClass(classOf[Reduce_new])
 
     job.setMapperClass(classOf[Map_part1])
     job.setReducerClass(classOf[Reduce_part1])

@@ -10,6 +10,8 @@ import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
 import org.joda.time.format.ISODateTimeFormat
 
+/** Used for initial testing, to see how the given timestamp can be converted to epoch time. 
+ * Not used in any of the subtasks in hand.*/
 object timetoEpoch {
 
   var cols : String = ""

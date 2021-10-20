@@ -3,6 +3,8 @@ package HelperUtils
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 
+/** Second Mapper Class for subtask 2.
+ * (key,value) :: (binned_time_step,1) */
 class Map_part2_2 extends Mapper[LongWritable, Text, Text, IntWritable] {
 
   val logger = CreateLogger(classOf[Map_part2_2])

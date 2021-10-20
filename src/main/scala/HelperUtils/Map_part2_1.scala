@@ -5,15 +5,20 @@ import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 import org.joda.time.format.DateTimeFormat
 
+/** First Mapper Class for subtask 2.
+ * Extension of mapper for subtask 1.
+ * (key,value) :: ((binned_time_step:log_type:matched_string),1) */
 class Map_part2_1 extends Mapper[LongWritable, Text, Text, IntWritable] {
   private val frequency: IntWritable = new IntWritable (1)
   private val key_map: Text = new Text
   val logger = CreateLogger(classOf[Map_part2_1])
   //val pattern = "([a-c][e-g][0-3]|[A-Z][5-9][f-w]){5,15}".r
 
+  //Read the pattern from the Application conf file.
   val config: Config = ConfigFactory.load("application.conf")
   val pattern = (config.getString("randomLogGenerator.Pattern")).r
 
+  //Read the number of bins from the user conf file.
   val bin_config: Config = ConfigFactory.load("User_Split.conf")
   val bin = bin_config.getInt("user_split.Bins")
 

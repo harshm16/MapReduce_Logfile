@@ -21,8 +21,13 @@ object Main_part4 {
 
   def main(args: Array[String]): Unit = {
 
-//    val outPut = new Path(args(1))
     val configuration = new Configuration()
+
+
+    /** While running on a Hadoop Sandbox VM,
+       * you can uncomment following lines to delete an already existing output directory. */
+
+//    val outPut = new Path(args(1))
 //    val fs = FileSystem.get(configuration)
 //    if (fs.exists(outPut))
 //      fs.delete(outPut, true)
@@ -52,6 +57,8 @@ object Main_part4 {
     FileOutputFormat.setOutputPath(job1, new Path(args(1)))
     job1.waitForCompletion(true)
 
+    /** Chaining multiple Map reduce jobs-: */
+    
     val conf2 = new Configuration()
     conf2.set("mapreduce.output.textoutputformat.separator",",")
     val job2 = Job.getInstance(conf2, "string_length_sort")

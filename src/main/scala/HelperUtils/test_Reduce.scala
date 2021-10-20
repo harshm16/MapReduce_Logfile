@@ -5,6 +5,8 @@ import org.apache.hadoop.mapreduce.Reducer
 import scala.collection.JavaConverters.*
 import java.lang
 
+/** Reducer class used for initial testing, to see how a map reduce job works.
+ * Not used in any of the subtasks in hand.*/
 class test_Reduce extends Reducer[Text, Text, Text, Text]{
 
   //val logger = CreateLogger(classOf[Reduce])

@@ -3,6 +3,8 @@ package HelperUtils
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 
+/** Mapper class used for initial testing, to see how a map reduce job works.
+ * Not used in any of the subtasks in hand.*/
 class test_Map_new extends Mapper[LongWritable, Text, Text, IntWritable] {
   private val one: IntWritable = new IntWritable(1)
   private val time: Text = new Text

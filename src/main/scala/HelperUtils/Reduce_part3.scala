@@ -5,6 +5,8 @@ import org.apache.hadoop.mapreduce.Reducer
 
 import scala.collection.JavaConverters.*
 
+/** Reducer Class for subtask 3.
+ * Sums up all the values for a particular key. */
 class Reduce_part3 extends Reducer[Text, IntWritable, Text, IntWritable] {
   private val count: IntWritable = new IntWritable()
 

@@ -7,7 +7,7 @@
 #### This Git repo contains the usage of map/reduce model on a randomly generated log file. This baseline of this repo was taken from: git@github.com:0x1DOCD00D/LogFileGenerator.git , where you can find the code for generation of the Log file. 
 #### Some files that were present in the above-mentioned repo have been removed as they were causing some dependency issues while creating a jar. Please refer the above link in case you want to know more about the process of the generation of the log files.
 
-###Task 1:
+### Task 1:
 #### Compute a CSV file that shows the distribution of different types of messages across predefined time intervals and injected string instances of the designated regex pattern for these log message types.
 
 ### Approach:
@@ -18,7 +18,7 @@
 Hadoop jar jar_name.jar Main input_dir output_dir 1
 ``` 
 
-###Task 2: 
+### Task 2: 
 #### Compute time intervals sorted in the descending order that contained most log messages of the type ERROR with injected regex pattern string instances.
 
 ### Approach:

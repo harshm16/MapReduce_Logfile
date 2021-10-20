@@ -12,7 +12,9 @@ import java.util.StringTokenizer
 class Main_new{}
 
 /**
- * Main program
+ * Main program to test the flow of a Map reduce job. Not used in solving any of the 4 subtasks in hand.
+
+
  * Map Reduce execution starts here
  */
 object Main_new {

@@ -3,6 +3,8 @@ package HelperUtils
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 
+/** Second Mapper Class for subtask 4.
+ * (key,value) :: (log_type,length_of_matched_string) */
 class Map_part4_2 extends Mapper[LongWritable, Text, Text, IntWritable] {
 
   val logger = CreateLogger(classOf[Map_part4_2])
