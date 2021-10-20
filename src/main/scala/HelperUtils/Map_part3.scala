@@ -1,5 +1,6 @@
 package HelperUtils
 
+import com.typesafe.config.{Config, ConfigFactory}
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 import org.joda.time.format.DateTimeFormat
@@ -8,7 +9,11 @@ class Map_part3 extends Mapper[LongWritable, Text, Text, IntWritable] {
   private val frequency: IntWritable = new IntWritable (1)
   private val key_map: Text = new Text
   val logger = CreateLogger(classOf[Map_part3])
-  val pattern = "([a-c][e-g][0-3]|[A-Z][5-9][f-w]){5,15}".r
+  //val pattern = "([a-c][e-g][0-3]|[A-Z][5-9][f-w]){5,15}".r
+
+  val config: Config = ConfigFactory.load("application.conf")
+  val pattern = (config.getString("randomLogGenerator.Pattern")).r
+
 
   override def map(key: LongWritable, rowLine: Text, context: Mapper[LongWritable, Text, Text, IntWritable]#Context) = {
     val line = rowLine.toString
