@@ -15,7 +15,7 @@
 
 #### To run -:
 ``` 
-Hadoop jar jar_name.jar Main input_dir output_dir 1
+hadoop jar jar_name.jar Main input_dir output_dir 1
 ``` 
 
 ### Task 2: 
@@ -26,7 +26,7 @@ Hadoop jar jar_name.jar Main input_dir output_dir 1
 
 #### To run -:
 ``` 
-Hadoop jar jar_name.jar Main input_dir output_dir_1 output_dir_2 output_dir_3 2
+hadoop jar jar_name.jar Main input_dir output_dir_1 output_dir_2 output_dir_3 2
 ``` 
 
 ### Task 3:
@@ -38,7 +38,7 @@ Hadoop jar jar_name.jar Main input_dir output_dir_1 output_dir_2 output_dir_3 2
 
 #### To run -:
 ``` 
-Hadoop jar jar_name.jar Main input_dir output_dir 3
+hadoop jar jar_name.jar Main input_dir output_dir 3
 ``` 
 
 ### Task 4:
@@ -50,7 +50,7 @@ Hadoop jar jar_name.jar Main input_dir output_dir 3
 
 #### To run -:
 ``` 
-Hadoop jar jar_name.jar Main input_dir output_dir_1 output_dir_2 4
+hadoop jar jar_name.jar Main input_dir output_dir_1 output_dir_2 4
 ``` 
 
 ### How to deploy it on AWS:
