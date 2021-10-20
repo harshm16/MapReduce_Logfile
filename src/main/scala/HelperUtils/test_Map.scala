@@ -5,7 +5,7 @@ import org.apache.hadoop.mapreduce.Mapper
 
 import scala.collection.mutable.ListBuffer
 
-class Map extends Mapper[LongWritable, Text, Text, Int] {
+class test_Map extends Mapper[LongWritable, Text, Text, Int] {
   /**
    * maps from input key-value to output key-value format
    * @param key
@@ -40,7 +40,7 @@ class Map extends Mapper[LongWritable, Text, Text, Int] {
 
 }
 
-object Map {
+object test_Map {
 
 
 }

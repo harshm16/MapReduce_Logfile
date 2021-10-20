@@ -8,7 +8,7 @@ class Map_part4 extends Mapper[LongWritable, Text, Text, IntWritable] {
   private val frequency: IntWritable = new IntWritable (1)
   private val key_map: Text = new Text
   val logger = CreateLogger(classOf[Map_part4])
-  //val pattern = "([a-c][e-g][0-3]|[A-Z][5-9][f-w]){5,15}".r
+  //  val pattern = "([a-c][e-g][0-3]|[A-Z][5-9][f-w]){5,15}".r
   val config: Config = ConfigFactory.load("application.conf")
   val pattern = (config.getString("randomLogGenerator.Pattern")).r
 

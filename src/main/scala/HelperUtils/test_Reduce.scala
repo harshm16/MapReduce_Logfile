@@ -5,7 +5,7 @@ import org.apache.hadoop.mapreduce.Reducer
 import scala.collection.JavaConverters.*
 import java.lang
 
-class Reduce extends Reducer[Text, Text, Text, Text]{
+class test_Reduce extends Reducer[Text, Text, Text, Text]{
 
   //val logger = CreateLogger(classOf[Reduce])
   /**

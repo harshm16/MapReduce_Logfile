@@ -3,7 +3,7 @@ package HelperUtils
 import org.apache.hadoop.io.{IntWritable, LongWritable, Text}
 import org.apache.hadoop.mapreduce.Mapper
 
-class Map_new extends Mapper[LongWritable, Text, Text, IntWritable] {
+class test_Map_new extends Mapper[LongWritable, Text, Text, IntWritable] {
   private val one: IntWritable = new IntWritable(1)
   private val time: Text = new Text
   private val error_type: Text = new Text

@@ -5,7 +5,7 @@ import org.apache.hadoop.mapreduce.Reducer
 
 import scala.collection.JavaConverters._
 
-class Reduce_new extends Reducer[Text, IntWritable, Text, IntWritable] {
+class test_Reduce_new extends Reducer[Text, IntWritable, Text, IntWritable] {
   private val count: IntWritable = new IntWritable()
 
   override def reduce(key: Text, values: java.lang.Iterable[IntWritable], context: Reducer[Text, IntWritable, Text, IntWritable]#Context): Unit = {
