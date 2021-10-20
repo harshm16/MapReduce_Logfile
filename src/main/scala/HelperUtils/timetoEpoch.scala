@@ -17,8 +17,9 @@ object timetoEpoch {
 
   val bin_config: Config = ConfigFactory.load("User_Split.conf")
   val bin = bin_config.getInt("user_split.Bins")
-  
-  for(line <- Source.fromFile("C:/Users/Harsh Mishra/Desktop/UIC/Sem1/CC/Assignment2/Git repo/MapReduce_LogFile//log/LogFileGenerator.2021-10-03.log").getLines()){
+
+  //for(line <- Source.fromFile("C:/Users/Harsh Mishra/Desktop/UIC/Sem1/CC/Assignment2/Git repo/MapReduce_LogFile//log/LogFileGenerator.2021-10-03.log").getLines()){
+  for(line <- Source.fromFile("log/LogFileGenerator.2021-10-08.log").getLines()){
     cols = line.split(" ")(0)
     //var cols : Array[String] = line.split(" ")
     //println(s"${cols}")

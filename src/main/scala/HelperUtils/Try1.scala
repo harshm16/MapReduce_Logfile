@@ -5,11 +5,11 @@ object Try1 {
 
   @main def runTry1 =
 
-    val convertTimetoEpoch = timetoEpoch
-    convertTimetoEpoch
+//    val convertTimetoEpoch = timetoEpoch
+//    convertTimetoEpoch
 
-//    val regexFind = regexMatch
-//    regexFind
+    val regexFind = regexMatch
+    regexFind
 
 //    val config: Config = ConfigFactory.load("application.conf")
 //    val pattern = config.getString("randomLogGenerator.Pattern")

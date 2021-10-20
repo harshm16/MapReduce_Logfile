@@ -16,7 +16,9 @@ object regexMatch {
   val config: Config = ConfigFactory.load("application.conf")
   val pattern = (config.getString("randomLogGenerator.Pattern")).r
 
-  for(line <- Source.fromFile("C:/Users/Harsh Mishra/Desktop/UIC/Sem1/CC/Assignment2/Git repo/MapReduce_LogFile/log/LogFileGenerator.2021-10-12.log").getLines()){
+  //for(line <- Source.fromFile("C:/Users/Harsh Mishra/Desktop/UIC/Sem1/CC/Assignment2/Git repo/MapReduce_LogFile/log/LogFileGenerator.2021-10-12.log").getLines()){
+  for(line <- Source.fromFile("log/LogFileGenerator.2021-10-08.log").getLines()){
+
     cols = line.split(" - ")(1)
     //var cols : Array[String] = line.split(" ")
     //println(s"${cols}")
