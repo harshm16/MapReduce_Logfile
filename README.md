@@ -2,9 +2,9 @@
 
 # Homework 2 (CS 441)
 
-### Problem Statement: Create a program for parallel distributed processing of the Logfile in order to generate pre-defined statistics about the respective log files. The statistics are mentioned in more detailed below.
+### Problem Statement: Create a program for parallel distributed processing of the Logfile in order to generate pre-defined statistics about the respective log files. The statistics are mentioned in more detail below.
 
-#### This Git repo contains the usage of map/reduce model on a randomly generated log file. This baseline of this repo was taken from: git@github.com:0x1DOCD00D/LogFileGenerator.git , where you can find the code for generation of the Log file. 
+#### This Git repo contains the usage of map/reduce model on a randomly generated log file. This baseline of this repo was taken from: [git@github.com:0x1DOCD00D/LogFileGenerator.git](https://github.com/google-research/torchsde) , where you can find the code for generation of the Log file. 
 #### Some files that were present in the above-mentioned repo have been removed as they were causing some dependency issues while creating a jar. Please refer the above link in case you want to know more about the process of the generation of the log files.
 
 ### Task 1:
